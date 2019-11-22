@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Cabin|Righteous&display=swap" rel="stylesheet">
+
+    <!-- fontAwesome -->
+     <script src="https://kit.fontawesome.com/e25b852c87.js" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+<link rel="icon" href="https://www.freepngimg.com/download/apple/63155-apple-icons-app-computer-keyboard-now-button.png" type="image/x-icon">
+
+    <title>Master Typing</title>
+  </head>
+  <body>
+    <div class="container main text-light" style="text-align: center;">
+      <h3 style="text-align: left;" title="Current Score" class="mt-3">SCORE :  <span id="score"></span></h3> 
+      <h1>MASTER TYPING</h1>
+      <h3 style="text-align: right;" class="mt-3">TIME :  <span id="time"></span></h3>
+      <br><br>
+      <h2 id="currentWord"></h2>
+      <br><br>
+      <input type="text" name="inputWord" id="inputHere" placeholder="Enter Here...">
+      <br><br>
+      <h4 id="gameStatus"></h4>
+      <br>
+      <p id="gameOver"></p>
+      <br><br>
+      <div>
+      <button id="instructions" title="Read Instructions" data-toggle="modal" data-target="#myModal">INSTRUCTIONS</button>
+      <button id="styleMode" data-toggle="modal" data-target="#modeModal">MODE : <span id="mode"></span></button>
+
+
+
+      <!-- modal for mode -->  
+      <div id="modeModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content stylingModal">
+      <div class="modal-header">
+        <h4 class="modal-title">Select Mode</h4>
+        <button type="button" id="closeModal" style="visibility: hidden;" class="close text-light" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body mt-2" style="padding-right:4rem;">
+      <button type="button" onclick="novice()" class="btn btn-success pl-3 ml-5">Novice</button>
+      <button type="button" onclick="medium()" class="btn btn-warning pl-3 ml-5">Medium</button>
+      <button type="button" onclick="pro()" class="btn btn-danger pl-3 ml-5">Pro</button>
+      </div>
+      <hr style="background-color: white;">
+      <div class="text-left">
+        <p id="modeModalFooter">Select As Per Your Skill And Compete With Your Friends</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+         <!-- modal for instructions -->  
+      <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content stylingModal">
+      <div class="modal-header">
+        <h4 class="modal-title">Instructions And Rules</h4>
+        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>Game Will Start When You Will Click The Input.</li>
+          <li> Type The Random Displaying words In The Given Time.</li>
+          <li> Correct Answer In Novice Mode Will Give you <strong class="text-success">1</strong> Point.</li>
+          <li> Correct Answer In Medium Mode Will Give you <strong class="text-warning">2</strong> Points.</li>
+          <li> Correct Answer In Pro Mode Will Give you <strong class="text-danger">3</strong> Points.</li>
+          <li>You Will Loose If You Entered The Wrong Spelling / Wrong Word.</li>
+          <li> <strong class="text-success">Novice Mode</strong> - Will Have 7 Seconds And Word Length is 6.</li>
+          <li> <strong class="text-warning">Medium Mode</strong> - Will Have 5 Seconds And Word Length is 7.</li>
+          <li> <strong class="text-danger">Pro Mode </strong>  - Will Have 3 Seconds And Word Length is 8</li>
+
+        </ul>
+      </div>
+      <hr style="background-color: white;">
+      <div class="text-left">
+          <p id="footerModal">HOPE YOU SCORE WELL - <span style="font-size: 0.8rem; color: orange">From Creator ♥</span></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+    <footer id="footer">
+          <p>Loved Or Hated The Game ? Drop A FeedBack</p> 
+         <a href="https://www.facebook.com/spa002" target="_blank"><img src="https://i.imgur.com/A7HmT2i.png" width="40" height="40" class="img-fluid icons" alt="facebook-logo"></a>
+        <a href="https://www.instagram.com/sparsh.codes/" target="_blank"> <img src="https://i.imgur.com/uBa6Ai2.png" width="40" height="40" class="img-fluid icons" alt="instagram-logo"></a>
+         <a href="https://twitter.com/SparshG13319363" target="_blank"> <img src="https://i.imgur.com/o47YxiO.png" width="40" height="40"class="img-fluid icons" alt="twitter-logo"></a>
+
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
