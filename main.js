@@ -17,7 +17,12 @@ $(window).on('load',function(){
     $("#styleMode").trigger("click");
 });   
 
+//setting the default mode(i.e Novice Mode)
 score.innerHTML=0;
+
+mode.innerHTML = "Novice";
+currentTime = 7;
+time.innerHTML = 7;
 
 //creating a 30 words array
 let ProWords = [
@@ -369,6 +374,9 @@ let randomWord = Math.floor((Math.random()*wordLength)+1);
 currentWord.innerHTML = words[randomWord];
 }
 }
+
+randomWordGenerator();
+
 
 inputHere.addEventListener("focus",startTime);
 inputHere.addEventListener("keydown",checkEnter);
