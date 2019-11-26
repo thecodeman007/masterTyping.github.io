@@ -1,4 +1,4 @@
-      *{
+ *{
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -9,6 +9,7 @@
   background-image: linear-gradient(107deg,#000000,#222831);
   background-repeat: no-repeat;
   height:auto;
+  text-align: center;
  }
 
 
@@ -18,7 +19,7 @@
   text-shadow: 3px 3px 3px #010038;
   margin-top: -6rem;
   font-family: 'Righteous', cursive;
-  color:violet;
+  color:#FFE042;
  }
 
  #currentWord{
@@ -33,19 +34,19 @@
  }
 
  .main{
-  background-image: linear-gradient(57deg,#6807f9,#9852f9);
+  background-color:#222831;
   border:2px solid;
   border-radius:1%;
   margin-top:2rem; 
   padding: 3rem; 
-  box-shadow: 3px 3px 3px grey;
+  /*box-shadow: 3px 3px 3px #ffa372;*/
   border:2px solid #1a2849;
   position: relative;
  }
 
  input{
   width: 35%;
-  height: 6vh;
+  height:6vh;
   padding-left:0.7rem;
   border:2px solid #010038;
   border-radius: 5%; 
@@ -72,6 +73,7 @@
  input:focus{
    outline:none;
    border:2px solid green;
+   color:#222831;
  }
 
  #instructions{
@@ -81,7 +83,7 @@
   border:none;
   letter-spacing:0.2rem;
   text-shadow: 1px 1px 2px #010038;
-  color:orange;
+  color:#FFE042;
 
  }
 
@@ -149,5 +151,12 @@ ul li {
 }
 
 #footer .icons{
-            margin-top: -0.2rem;
+     margin-top: -0.2rem;
+}
+
+
+#restrictedModal{
+	background-color:black;
+	color: white;
+	word-spacing: 0.2rem;
 }

@@ -13,9 +13,27 @@ let mode = document.getElementById("mode");
 
 
 //will be the first modal to get the difficulty level from user
+  
+
+
+//restricting the game for a specific screen size 
 $(window).on('load',function(){
+
+if(screen.width<=800){
+	
+    $("#restrictedModalButton").trigger("click");
+
+}else{
+
     $("#styleMode").trigger("click");
-});   
+
+}
+
+});
+
+
+
+
 
 //setting the default mode(i.e Novice Mode)
 score.innerHTML=0;
@@ -454,4 +472,7 @@ function startTime(){
   }
 
 }
-    
+
+
+
+
